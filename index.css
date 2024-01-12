@@ -1,0 +1,179 @@
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+table {
+    width: 100%;
+}
+
+.calculator {
+    width: 282px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px rgb(131, 133, 139) solid;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+button {
+    width: 61px;
+    height: 61px;
+    font-size: 16px;
+    margin: 1px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+ 
+
+}
+button:active { 
+    transform: scale(0.95); 
+    box-shadow: 3px 2px 22px 1px rgba(120, 119, 119, 0.24); 
+   
+} 
+
+
+.clearButton {
+    background-color: rgb(237, 70, 70, 0.7);
+}
+
+.equalButton {
+    background-color: rgb(50, 165, 50, 0.7);
+}
+
+#result {
+    width: 80%;
+    max-width: 80%;
+    height: 100%;
+    font-size: 50px;
+    text-align: right;
+
+}
+
+#history {
+    width: 50%;
+    height: 100px;
+    text-align: left;
+    color: rgb(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+.historyButton {
+    font-size: 16px;
+    cursor: pointer;
+    align-self: self-end;
+    margin: 5px;
+}
+ .removeLastButton{
+    font:bolder;
+    cursor: pointer;
+    align-self: self-end;
+    /* margin-left: 5px; */
+    font-size: 16px;
+    margin: 5px;
+ }
+ .removeLastButton:active { 
+    transform: scale(0.91); 
+    box-shadow: 3px 2px 22px 1px rgba(120, 119, 119, 0.24); 
+}
+
+.historyContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.output {
+    border: 1px solid #0f0f0f;
+    padding: 0;
+    width: 95%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+i {
+    width: 5%;
+    height: 5%;
+}
+i:active { 
+    transform: scale(0.91); 
+    box-shadow: 3px 2px 22px 1px rgba(120, 119, 119, 0.24); 
+}
+
+@media(max-width:600px) {
+    .calculator {
+        border-collapse: collapse;
+        width: 200px;
+        height: 300px;
+    }
+
+    button {
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
+        margin: 1px;
+        cursor: pointer;
+    }
+
+    #result {
+        font-size: 30px;
+    }
+
+    #history {
+        font-size: 10px;
+    }
+    .removeLastButton{
+        font-size: 13px;
+        margin: 3px;
+    }
+    .historyButton{
+        font-size: 13px;
+        margin: 3px;
+    }
+}
+
+@media(max-width:300px) {
+    .calculator {
+        border-collapse: collapse;
+        width: 140px;
+        height: 220px;
+    }
+
+    button {
+        width: 29px;
+        height: 29px;
+        font-size: 16px;
+        margin: 1px;
+        cursor: pointer;
+    }
+
+    #result {
+        font-size: 15px;
+    }
+
+    #history {
+        font-size: 10px;
+    }
+    .removeLastButton{
+        font-size: 11px;
+        margin: 2px;
+    }
+    .historyButton{
+        font-size: 11px;
+        margin: 2px;
+    }
+}
